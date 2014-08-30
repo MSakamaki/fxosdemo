@@ -74,7 +74,13 @@ module.exports = function(grunt) {
                     }
                 ]
             }
-        }
+        },
+        'gh-pages': {
+            options: {
+              base: 'app'
+            },
+            src: ['**/*']
+          }
     });
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -83,6 +89,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-compress');
+    grunt.loadNpmTasks('grunt-gh-pages');
 
     /**
     * Tasks
